@@ -1,4 +1,4 @@
-%
+% jPSTH for figure 1
 clear
 udir= '../new_data/';
 dates = dir([udir 'D*']);
@@ -82,6 +82,7 @@ for j=1:length(dates)
                     cell1=new_cell1; cell2=new_cell2;
                 end
                 [raw, shift_predict, pred, surprise, std, ~, ~] = my_JPSTH(cell1', cell2', nbin,0.5);
+                % my_JPSTH.m is from https://doi.org/10.5281/zenodo.6464052
                 % %             all_jpsth(c_all,:,:)=raw-pred;
                 num_trials= size(cell1,1);
                 all_jpsth_norm(c_all,:,:)=(raw-pred)./num_trials;%./std;
@@ -183,23 +184,3 @@ plot([axx(1) axx(end)],[0 0],'--k','LineWidth',1)
 a=axis;
 plot([0 0],[a(3) a(4)],'--k','LineWidth',2)
 hold off
-
-%%
-% % % % % k=round(-length(axx)/2:length(axx)/2);
-% % % % % for i=1:length(k)
-% % % % %     ix= find(gain(:,1)<-.05 & gain(:,2)<-.05);
-% % % % %     anti_diag(1,i)= nanmean(diag(imgaussfilt(squeeze(nanmean(all_jpsth_norm(ix,:,:),1)),1),k(i)));
-% % % % %     ix= find(gain(:,1)>.05 & gain(:,2)>.05);
-% % % % %     anti_diag(2,i)= nanmean(diag(imgaussfilt(squeeze(nanmean(all_jpsth_norm(ix,:,:),1)),1),k(i)));
-% % % % %     ix= find(gain(:,1)<-.05 & gain(:,2)>.05);
-% % % % %     anti_diag(4,i)= nanmean(diag(imgaussfilt(squeeze(nanmean(all_jpsth_norm(ix,:,:),1)),1),k(i)));
-% % % % % end
-% % % % % for i=1:size(anti_diag,1)
-% % % % %     subplot(3,3,6+i)
-% % % % %     plot(k*10,anti_diag(i,:),'k','LineWidth',2)
-% % % % %     hold on
-% % % % %     a=axis;
-% % % % %     plot([0 0],a(3:4),'--k')
-% % % % %     plot(a(1:2),[0 0],'--k')
-% % % % %     hold off
-% % % % % end

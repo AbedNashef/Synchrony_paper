@@ -1,4 +1,4 @@
-%
+% script to calculate and plot panels in Fig. 1
 clear
 udir= '../new_data/';
 dates = dir([udir 'D*']);

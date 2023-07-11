@@ -1,4 +1,4 @@
-%
+% Figure 3. For each trial calculate SI, modulation and behavioral kinematics
 clear
 udir= '../new_data/';
 dates = dir([udir 'D*']);

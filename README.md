@@ -9,7 +9,7 @@
 - in revisions
 
 ## Purpose / Summary
-
+Purkinje cells (PCs) mediate adaptive cerebellar output through inhibitory control of the cerebellar nuclei. Because many PCs converge, their influence on target neurons likely depends on population activity. However, despite a large literature relating individually recorded PCs to behavior, relatively little is known about how multiple PCs collaborate to influence movement. To address this knowledge gap, we tested if millisecond timescale covariance of PCs relates to behavioral control, analyzing simultaneously recorded PCs during mouse forelimb reach behavior. We discovered that specific forelimb reach kinematic variables correlated either with PC firing rates or PC synchrony: reach velocity and deceleration were encoded in firing rates, while the relationship between these variables, termed deceleration gain, was encoded by synchrony. In a model and dynamic-clamp slice experiments, we found that physiological levels of synchrony could raise nuclear firing rates to levels that could account for excess deceleration leading to hypometric reach endpoints. These findings suggest that both PC population covariance and firing rate cooperatively structure fine control of reaching and point to a specific role for PC synchronous activity in motor coordination.
 
 ## Repository / Capsule Contents (File Structure)
 CodeOcean
